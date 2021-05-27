@@ -7312,5 +7312,11 @@
       <field type="uint8_t" name="msg_pack_size">Number of encoded messages in the pack (not the number of bytes). Allowed range is 1 - 10.</field>
       <field type="uint8_t[250]" name="messages">Concatenation of encoded OpenDroneID messages. Shall be filled with nulls in the unused portion of the field.</field>
     </message>
+    <message id="1400" name="MODALITY_SNAPSHOT">
+      <description>Modality probe snapshot</description>
+      <field type="uint64_t" name="time_usec" units="us">Timestamp (UNIX Epoch time or time since system boot).</field>
+      <field type="uint32_t" name="sequence_number">Sequence number.</field>
+      <field type="uint8_t[12]" name="snapshot">Modality probe snapshot bytes.</field>
+    </message>
   </messages>
 </mavlink>
